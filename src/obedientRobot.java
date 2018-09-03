@@ -5,8 +5,8 @@ import org.jointheleague.graphical.robot.Robot;
 public class obedientRobot {
 	static Robot icee = new Robot();
 public static void main(String[] args) {
-String shape = JOptionPane.showInputDialog("Whic shape would you like to have drawn. Triangle, square, or circle?");
-	icee.setSpeed(10);
+String shape = JOptionPane.showInputDialog("Which shape would you like to have drawn. Triangle, square, or circle?");
+	icee.setSpeed(30);
 	icee.penDown();
 	if(shape.equals("triangle")) {drawTriangle();}
 	if(shape.equals("square")) {drawSquare();}
@@ -24,10 +24,10 @@ icee.turn(120);
 }}
 public static void drawCircle() {
 	for (int i = 0; i < 360; i++) {
-		
+		icee.move(1);
+		icee.turn(1);
 	}
-	icee.move(1);
-	icee.turn(1);
+	
 }
 
 }
